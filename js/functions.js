@@ -13,6 +13,11 @@ var card = document.getElementsByClassName("card");
 var icon = document.getElementsByClassName("icon");
 var media = document.getElementsByClassName("animate");
 
+//responsive
+let mm = gsap.matchMedia();
+
+mm.add("(min-width: 992px)", () => {
+
 document.body.onload = function () {
   titles.forEach((title) => {
     gsap
@@ -98,6 +103,7 @@ document.body.onload = function () {
       .fromTo(card, { opacity: 0, y: 300 }, { opacity: 1, y: 0 });
   });
 };
+});
 
 /*DATEPICKER*/
 

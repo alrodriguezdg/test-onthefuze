@@ -438,6 +438,10 @@ section {
         padding: 20px;
     }
 
+    .bgModule1{
+        height: 100vh;
+    }
+
     nav .menu {
         width: 100%;
         text-align: center;
@@ -446,7 +450,24 @@ section {
     nav ul li{
         display: block;
     }
+
+    img{
+        max-width: 600px;
+        margin: 0 auto;
+        display: block;
+    }
+    section{
+        height: auto;
+        display: block
+    }
     .social ul li{
         margin: 0;
+    }
+    .videoContent{
+        margin-bottom: 0;
+    }
+
+    .statistics{
+        height: auto;
     }
 }
