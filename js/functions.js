@@ -66,7 +66,7 @@ mm.add("(min-width: 992px)", () => {
           default: { ease: "expo", duration: 3, delay: 2 },
           scrollTrigger: {
             trigger: media,
-            start: "top top+=50%",
+            start: "top top+=90%",
             end: "bottom",
             toggleActions: "play pause none reverse",
           },
