@@ -105,6 +105,24 @@ document.body.onload = function () {
 };
 });
 
+/*FIXED MENU*/
+
+let scrollHeader = window.scrollY
+  const header = document.querySelector("header")
+  const headerHeight = header.offsetHeight
+
+  const addClass = () => header.classList.add("fixed")
+  const removeClass = () => header.classList.remove("fixed")
+
+  window.addEventListener('scroll', function() { 
+    scrollHeader = window.scrollY;
+
+    if (scrollHeader >= headerHeight) { addClass() }
+    else { removeClass() }
+
+    console.log(scrollHeader)
+  })
+
 /*DATEPICKER*/
 
 var toggleCalendar = document.getElementById("openCalendar");
