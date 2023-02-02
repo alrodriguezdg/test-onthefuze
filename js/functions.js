@@ -1,4 +1,4 @@
-/* ANIMATIONS */
+//ANIMATIONS
 gsap.registerPlugin(ScrollTrigger);
 
 const titles = Array.from(document.querySelectorAll("h1, h2, h3, h4, h5"));
@@ -123,7 +123,7 @@ let scrollHeader = window.scrollY
     console.log(scrollHeader)
   })
 
-/*DATEPICKER*/
+//DATEPICKER
 
 var toggleCalendar = document.getElementById("openCalendar");
 
@@ -133,9 +133,7 @@ const picker = datepicker("#datepicker", {
     input.value = value; // => '1/1/2099'
   },
 });
-// Toggle the calendar when a button is clicked.
 toggleCalendar.addEventListener("click", (e) => {
-  // THIS!!! Prevent Datepicker's event handler from hiding the calendar.
   e.stopPropagation();
 
   // Toggle the calendar.
