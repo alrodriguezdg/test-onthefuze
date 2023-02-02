@@ -37,10 +37,6 @@
   padding: 0;
 }
 
-body{
-    width: 100%;
-}
-
 h1,
 h2,
 h3,
@@ -133,7 +129,14 @@ footer ul li a {
   color: white;
   text-decoration: none;
   font-family: 'gothambold';
+  transition: all ease-in-out .2s;
 }
+
+footer ul li a:hover {
+    color: var(--light-gray2);
+    transition: all ease-in-out .2s;
+  }
+  
 
 footer p {
   font-size: 12px;
@@ -249,22 +252,27 @@ section {
   margin: 5px;
   width: 25px;
   height: 25px;
-  border-radius: 5px;
 }
 
 .social .facebook {
   -webkit-mask: url(../img/facebook.svg) no-repeat center;
   mask: url(../img/facebook.svg) no-repeat center;
+  -webkit-mask-size: cover;
+  mask-size: cover;
 }
 
 .social .linkedin {
   -webkit-mask: url(../img/linkedin.svg) no-repeat center;
   mask: url(../img/linkedin.svg) no-repeat center;
+  -webkit-mask-size: cover;
+  mask-size: cover;
 }
 
 .social .instagram {
   -webkit-mask: url(../img/instagram.svg) no-repeat center;
   mask: url(../img/instagram.svg) no-repeat center;
+  -webkit-mask-size: cover;
+  mask-size: cover;
 }
 
 .statistics {
@@ -322,6 +330,12 @@ section {
   background-color: var(--red);
   color: white;
   border-radius: 50px;
+  border: 2px solid var(--red);
+}
+
+.btn-red:hover{
+    background-color: transparent;
+    color: var(--red);
 }
 
 .btn-teal {
@@ -330,6 +344,11 @@ section {
   text-transform: capitalize;
   font-size: 14px;
   padding: 6px 10px;
+}
+
+.btn-teal:hover{
+    background-color: #0579b2;
+    color: white;
 }
 
 .card {
@@ -390,6 +409,10 @@ section {
   font-size: 12px;
 }
 
+.row{
+    margin-right: 0 !important;
+}
+
 /***DATEPICKER***/
 
 .qs-datepicker-container{
@@ -418,7 +441,6 @@ section {
     font-size: 14px;
 }
 
-
 /***STAR MEDIA QUERIES****/
 
 @media screen and (max-width: 1350px){
@@ -440,6 +462,9 @@ section {
     nav .menu {
         width: calc(100% - 70px);
     }
+    nav ul li, .social ul li{
+        margin: 0 5px;
+    }
 }
 
 @media screen and (max-width: 992px){
@@ -453,7 +478,6 @@ section {
     position: absolute;
     top: 38px;
     left: 0px;
-    margin-left: 21px;
     width: 100%;
     
     z-index: 1;
@@ -497,7 +521,7 @@ section {
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    
+    margin-left: 25px;
     background: var(--blue);
     border-radius: 3px;
     
@@ -546,9 +570,8 @@ section {
     margin: 0px;
     padding: 50px;
     padding-top: 125px;
-    top: -38px;
-    left: -21px;
-    background: #ededed;
+    top: 0px;
+    background: white;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     
@@ -652,19 +675,13 @@ section {
         transition: all ease-in-out .3s;
     }
 
-    header.fixed #menuToggle{
-        top: 28px;
-        transition: all ease-in-out .3s;
-    }
-
     header.fixed .top-bar{
         top: 20px;
         transition: all ease-in-out .3s;
     }
 
-    header.fixed #menu{
-        top: -28px;
-        transition: all ease-in-out .3s;
+    header.fixed #menuToggle{
+        top: 25px;
     }
 
     p{
